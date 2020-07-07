@@ -72,7 +72,7 @@ public class CityServiceImpl extends ServiceImpl<CityMapper, City> implements Ci
         if (res > 0) {
             //更新缓存
             operations.set(key, city, 10, TimeUnit.SECONDS);
-            LOGGER.info("CityServiceImpl.findCityById() : 城市插入缓存 >> " + city.toString());
+            LOGGER.info("CityServiceImpl.updateCity() : 城市更新缓存 >> " + city.toString());
         }
         return cityMapper.updateById(city);
     }
