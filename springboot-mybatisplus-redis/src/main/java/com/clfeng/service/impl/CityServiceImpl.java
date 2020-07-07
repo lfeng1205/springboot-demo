@@ -23,6 +23,7 @@ import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
  */
 @Service
 public class CityServiceImpl extends ServiceImpl<CityMapper, City> implements CityService {
+
     @Autowired
     private CityMapper cityMapper;
 
