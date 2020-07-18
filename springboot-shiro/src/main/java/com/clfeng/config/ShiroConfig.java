@@ -30,8 +30,9 @@ public class ShiroConfig {
             role:拥有某个角色权限才能访问
        */
         HashMap<String, String> filterMap = new HashMap<>(16);
-        filterMap.put("/user/add","authc");
-        filterMap.put("/user/update","authc");
+        //授权
+        filterMap.put("/user/add","perms[user:add]");
+        filterMap.put("/user/*","authc");
         factoryBean.setFilterChainDefinitionMap(filterMap);
 
         //设置登录请求
